@@ -1,0 +1,27 @@
+<svg class="wallpaper" width="1440" height="900" viewBox="0 0 1440 900">
+    <style>
+        .background {
+            fill: #212121;
+        }
+
+        .blocks rect {
+            fill: #fff;
+            opacity: 0.15;
+            stroke: none;
+        }
+
+        .blocks rect:nth-child(odd) {
+            opacity: 0.1;
+        }
+    </style>
+
+    <rect class="background" x="0" y="0" width="100%" height="100%"></rect>
+
+    <g class="blocks">
+        <rect x="62%" y="0" width="30%" height="20%"></rect>
+        <rect x="62%" y="20%" width="30%" height="20%"></rect>
+        <rect x="62%" y="40%" width="30%" height="20%"></rect>
+        <rect x="62%" y="60%" width="30%" height="20%"></rect>
+        <rect x="62%" y="80%" width="30%" height="20%"></rect>
+    </g>
+</svg>
