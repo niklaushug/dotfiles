@@ -24,14 +24,7 @@ alias cdp="cd ~/projects/prod"
 alias cddown="cd ~/Downloads"
 alias cddesk="cd ~/Desktop"
 alias ~="cd ~"
-alias ..="cd  .."
-alias ...="cd  ../.."
-alias ....="cd  ../../.."
-alias .....="cd  ../../../.."
-alias ......="cd  ../../../../.."
-alias .......="cd  ../../../../../.."
-alias ........="cd  ../../../../../../.."
-alias .........="cd  ../../../../../../../.."
+up(){ cd $(printf '../%.s' $(seq 1 $1)); }  # traverse up in directory by `up 3`
 
 # Detect which `ls` flavor is in use (copied from https://github.com/mathiasbynens/dotfiles/blob/master/.aliases)
 if ls --color > /dev/null 2>&1; then # GNU `ls`
