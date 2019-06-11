@@ -26,6 +26,15 @@ alias cddesk="cd ~/Desktop"
 alias ~="cd ~"
 up(){ cd $(printf '../%.s' $(seq 1 $1)); }  # traverse up in directory by `up 3`
 
+# git shortcuts
+alias gita="git add -A"
+alias gitl="git log"
+alias gits="git status"
+alias gitd="git diff"
+alias gitdc="git diff --cached"
+alias gitrc="git rebase --continue"
+alias gitrs="git rebase --skip"
+
 # ls colors for mac
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
