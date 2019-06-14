@@ -28,12 +28,17 @@ up(){ cd $(printf '../%.s' $(seq 1 $1)); }  # traverse up in directory by `up 3`
 
 # git shortcuts
 alias gita="git add -A"
-alias gitl="git log"
-alias gits="git status"
+alias gitb="git branch"
+alias gitc="git checkout"
 alias gitd="git diff"
 alias gitdc="git diff --cached"
+alias gitl="git log"
+alias gitls="git log --pretty=format:'%h %s (%an)'"
+alias gitp="git pull"
+alias gitra="git rebase --abort"
 alias gitrc="git rebase --continue"
 alias gitrs="git rebase --skip"
+alias gits="git status"
 
 # ls colors for mac
 export CLICOLOR=1
