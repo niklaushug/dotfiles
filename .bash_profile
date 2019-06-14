@@ -88,10 +88,8 @@ elif [ -f /etc/bash_completion ]; then
     source /etc/bash_completion;
 fi;
 
-# Enable tab completion for `g` by marking it as an alias for `git` (copied from https://github.com/mathiasbynens/dotfiles/blob/master/.bash_profile)
-if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-    complete -o default -o nospace -F _git g;
-fi;
+# Enable tab completion for git (bash_completion was installed with brew)
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards (copied from https://github.com/mathiasbynens/dotfiles/blob/master/.bash_profile)
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
