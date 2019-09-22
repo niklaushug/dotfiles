@@ -1,0 +1,5 @@
+jenv
+node
+nvm
+python3
+yarn
