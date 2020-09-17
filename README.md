@@ -28,28 +28,21 @@ Set Git environment
 Check Git environment
 
     git config --list
+    cat ~/.gitconfig
+    
 
-## [nvm](https://github.com/nvm-sh/nvm)
+## [n: Node Version Manager](https://github.com/tj/n)
+
+Formula n is listed in formulas.txt.
+
+1. [Avoid sudo](https://github.com/tj/n#installation) by taking ownership of system directories.
+2. Install [avn-n](https://github.com/wbyoung/avn-n) to switch automatically versions.
+
+## [jEnv: Java Version Manager](https://www.jenv.be/)
 
 Formula jEnv is listed in formulas.txt. Bash configuration is found in .bash_profile.
 
-
-## [jEnv](https://www.jenv.be/)
-
-Formula jEnv is listed in formulas.txt. Bash configuration is found in .bash_profile.
-
-Create folders for jEnv
-
-    mkdir ~/.jenv && mkdir ~/.jenv/versions
-
-Add Java versions to jEnv
-
-    jenv add /Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/
-    jenv add /Library/Java/JavaVirtualMachines/openjdk-12.0.2.jdk/Contents/Home/
-
-Check added Java versions
-
-    jenv versions
+See https://developer.bring.com/blog/configuring-jenv-the-right-way/ for configuration. 
 
 ## [Bower](https://bower.io/)
 
@@ -62,6 +55,7 @@ Install Bower
 ## Installation
 ### App Store
 * [XCode](https://apps.apple.com/de/app/xcode/id497799835?mt=12)
+* [Telefon](https://apps.apple.com/ch/app/telefon/id406825478?mt=12)
 
 ### Brew
 Install all apps in one go.
@@ -76,27 +70,36 @@ All apps are listed in casks.txt.
 * [Caffeine](http://lightheadsw.com/caffeine/) caffeine
 * [Chrome](https://www.google.com/intl/de/chrome) google-chrome
 * [Dashlane](https://www.dashlane.com/de/download) dashlane
+* [Docker](https://www.docker.com/) docker
 * [Dropbox](https://www.dropbox.com/de/downloading) dropbox
 * [Evernote](https://evernote.com/intl/de/download) evernote
 * [Firefox](https://www.mozilla.org) firefox
 * [Geek Tool](https://www.tynsoe.org/v2/geektool) geektool
 * [Gimp](https://www.gimp.org/downloads) gimp
-* [iStat Menus](Download: https://bjango.com/mac/istatmenus) istat-menus
-* [IStumbler](Download: https://istumbler.net) istumbler
-* [iTerm](https://www.iterm2.com) iterm2
+* [IStumbler](https://istumbler.net) istumbler
+* [Inkscape](https://inkscape.org/de/) inkscape
+* [Intellij IDEA](https://www.jetbrains.com/de-de/idea/) intellij-idea
+* [Kitematic](https://kitematic.com) kitematic
 * [Libre Office](https://www.libreoffice.org) libreoffice
 * [Moom](https://manytricks.com/moom/) moom
+* [Postman](https://www.postman.com/) postman
 * [Scribus](https://www.scribus.net/downloads) scribus
+* [Sketch](https://www.sketch.com/) sketch
+* [Sourcetree](https://www.sourcetreeapp.com/) sourcetree
 * [Spotify](https://www.spotify.com/de/download/other/) spotify
 * [Sublime Text](https://www.sublimetext.com) sublime-text
 * [The Unarchiver](https://apps.apple.com/ch/app/the-unarchiver/id425424353) the-unarchiver
 * [Transmit](https://apps.apple.com/de/app/transmit-5/id1436522307) transmit
-* [Virtual Box](https://www.virtualbox.org/wiki/Downloads) virtualbox
 * [VLC](https://www.videolan.org/vlc) vlc
+* [Virtual Box](https://www.virtualbox.org/wiki/Downloads) virtualbox
+* [iStat Menus](https://bjango.com/mac/istatmenus) istat-menus
+* [iTerm](https://www.iterm2.com) iterm2
+* [rocket.chat](https://rocket.chat/) rocket-chat
+* [whatsapp](https://www.whatsapp.com) Whatsapp
 
 ### Manually
 * [MS Virtual Machine](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms)
-
+* [Office 365](https://www.office.com/)
 
 ## Configure apps
 
@@ -122,7 +125,7 @@ All apps are listed in casks.txt.
 Press: Cmd & Shift & P  => Open: Package Control: Advanced Install Package => Enter:
 Autoprefixer,
 Babel,
-Color Highlighter,
+ColorHints,
 CSScomb,
 CSSLint,
 Emmet,
@@ -132,15 +135,15 @@ GitGutter,
 HTML-CSS-JS Prettify,
 jQuery,
 MarkdownLivePreview,
+ReactJS,
 SideBarEnhancements,
 SublimeLinter-html-tidy,
 SublimeLinter-jshint,
 SublimeLinter-json,
 SublimeLinter-xmllint,
-ReactJS,
 Theme - Monokai Pro,
 Trimmer,
-TypeScript,
+TypeScript
 
 ### Apple Id
 ### Mail Accounts

@@ -3,8 +3,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # java by jenv (http://www.jenv.be/)
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
-export JAVA_HOME;
 
 # app shortcuts
 alias acro="open -a 'Adobe Acrobat Pro.app'"
@@ -99,10 +97,8 @@ fi;
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards (copied from https://github.com/mathiasbynens/dotfiles/blob/master/.bash_profile)
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
-# Start nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
 # Chrome for Nick.js (Error: Could not start chrome: Error: spawn google-chrome-unstable ENOENT - https://github.com/phantombuster/nickjs/issues/5)
 export CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
+# Never retype passphrase, see https://stackoverflow.com/a/24902046/6197243
+eval $(keychain --eval id_rsa)

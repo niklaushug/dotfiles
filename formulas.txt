@@ -1,5 +1,13 @@
+colordiff
+composer
+curl-openssl
+docker-compose
+git-lfs
+gradle
+ipython
 jenv
-node
-nvm
-python3
+keychain
+maven
+n
+python@3.8
 yarn
