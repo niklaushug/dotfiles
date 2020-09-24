@@ -8,7 +8,7 @@
 	ZmZmg/T/fz+DU/5/P4Nu/38/AYY=
 	</data>
 	<key>Command</key>
-	<string>/usr/local/bin/node /Users/niklaushug/Projects/produktiv/dotfiles/desktop/load-image-from-unsplash.js --cl &amp;&amp; /usr/local/bin/node /Users/niklaushug/Projects/produktiv/dotfiles/desktop/load-quote-from-stormconsultancy.js</string>
+	<string>/usr/local/bin/node /Users/niklaushug/projects/prod/dotfiles/desktop/load-image-from-unsplash.js --cl &amp;&amp; /usr/local/bin/node /Users/niklaushug/projects/prod/dotfiles/desktop/load-quote-from-stormconsultancy.js</string>
 	<key>DisplayStatusImage</key>
 	<true/>
 	<key>DropShadow</key>

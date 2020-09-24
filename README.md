@@ -11,11 +11,15 @@ Set environment variables and define aliases by copying default .bash_profile.
 
 ## [Brew](https://brew.sh)
 
+Make JDKs downloadable (JDKs are listed in casks.txt.)
+
+    brew tap AdoptOpenJDK/openjdk
+
 Install Brew
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-Install Formulas
+Install Formulas (System password is several times requested.)
 
     brew install $(cat formulas.txt)
 
@@ -42,7 +46,27 @@ Formula n is listed in formulas.txt.
 
 Formula jEnv is listed in formulas.txt. Bash configuration is found in .bash_profile.
 
-See https://developer.bring.com/blog/configuring-jenv-the-right-way/ for configuration. 
+Add Java versions to jEnv.
+ 
+      jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
+      jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-9.jdk/Contents/Home/
+      jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-10.jdk/Contents/Home/
+      jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/
+      jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-12.jdk/Contents/Home/
+      jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home/
+      jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home/
+
+Enable jEnv plugins.
+
+      jenv enable-plugin maven
+      jenv enable-plugin export
+
+Check if configuration was successful.
+      
+      jenv versions    # Shows a list of Java versions to choose from.      
+      echo $JAVA_HOME  # Shows an absolute path to a Java version. 
+      javac -version   # Shows a version.
+
 
 ## [Bower](https://bower.io/)
 
@@ -95,7 +119,7 @@ All apps are listed in casks.txt.
 * [iStat Menus](https://bjango.com/mac/istatmenus) istat-menus
 * [iTerm](https://www.iterm2.com) iterm2
 * [rocket.chat](https://rocket.chat/) rocket-chat
-* [whatsapp](https://www.whatsapp.com) Whatsapp
+* [Whatsapp](https://www.whatsapp.com) whatsapp
 
 ### Manually
 * [MS Virtual Machine](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms)
@@ -109,12 +133,37 @@ All apps are listed in casks.txt.
 ### Better Touch Tool
     Open: Better Touch Tool Preferences => /Advanced Settings/Sync => Check: Enable Dropbox Sync
 
+### Chrome
+
+1. Open application
+1. Sign in with account and let install extensions automatically.
+
 ### Geek Tool
-    $ cd /projects/prod/dotfiles/desktop
-    Drag'n'drop: Display Image.glet, Display Quote.glet, Load Image and Quote.glet
+   
+1. Open folder `./desktop`   
+1. Double click on files `Display Image.glet`, `Display Quote.glet` and `Load Image and Quote.glet` to start.
+1. Open `Load Image and Quote.glet` to configure `--cl` in field `Command`. `--cl` is an application id for [unsplash.com](https://unsplash.com/). 
+
+### iStat
+
+1. Open app `iStat Menu`
+1. Add License by opening menu `iStat Menu > Aktivieren`  
+1. Import setting by opening  menu `Ablage > Einstellungen importieren` and loading file `/Dropbox/Apps Config/iStat Menus/iStat Menus Settings.ismp`.
+
+### iTerm
+
+1. Open app `iTerm`
+1. Import settings by opening `menu: iTerm > Preferences`, `tab: Profiles`, `dropdown: Other Actions > Import JSON Profiles` and loading file `/Dropbox/Apps Config/iTerm2/Profiles/nhug.json`.
 
 ### Moom
-    $ cp ~/Library/Preferences/com.manytricks.Moom.plist ~/Dropbox/Apps Config/Moom/
+
+[Activate Moom license](https://manytricks.com/osticket/kb/faq.php?id=2)
+
+    cp ~/Dropbox/Apps\ Config/Many\ Tricks/Receipts ~/Library/Application\ Support/Many\ Tricks/
+
+[Import Moom settings](https://manytricks.com/osticket/kb/faq.php?id=53)
+
+    defaults import com.manytricks.Moom ~/Dropbox/Apps\ Config/Many\ Tricks/com.manytricks.Moom.plist
 
 
 
@@ -145,7 +194,7 @@ Theme - Monokai Pro,
 Trimmer,
 TypeScript
 
-### Apple Id
 ### Mail Accounts
-
+### SSH
+### WiFi
 

@@ -28,11 +28,12 @@ moom
 postman
 rocket-chat
 scribus
+sketch
 sourcetree
 spotify
 sublime-text
 the-unarchiver
 transmit
-virtualbox
 vlc
 whatsapp
+virtualbox
